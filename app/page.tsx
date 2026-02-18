@@ -1,65 +1,198 @@
+import Link from "next/link";
 import Image from "next/image";
+import { ArrowRight, CheckCircle2, Factory, Globe2, Leaf, ShieldCheck } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { SectionHeader } from "@/components/ui/section-header";
+
+import { HeroSection } from "@/components/home/hero-section";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="flex flex-col min-h-screen">
+      <HeroSection />
+
+      {/* Highlights / Features */}
+      <section className="container py-24 px-4 max-w-screen-xl mx-auto">
+        <div className="grid gap-8 md:grid-cols-3">
+          <Card className="bg-card/50 border-none shadow-sm transition-all hover:shadow-md">
+            <CardContent className="flex flex-col items-center p-8 text-center space-y-4">
+              <div className="p-3 rounded-full bg-primary/10 text-primary">
+                <Leaf className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold">100% Organic Sourcing</h3>
+              <p className="text-muted-foreground">
+                Sourced directly from sustainable coconut plantations across Indonesia.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card/50 border-none shadow-sm transition-all hover:shadow-md">
+            <CardContent className="flex flex-col items-center p-8 text-center space-y-4">
+              <div className="p-3 rounded-full bg-primary/10 text-primary">
+                <ShieldCheck className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold">Premium Quality Control</h3>
+              <p className="text-muted-foreground">
+                Rigorous inspection processes to ensure moisture content and size meet international standards.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-card/50 border-none shadow-sm transition-all hover:shadow-md">
+            <CardContent className="flex flex-col items-center p-8 text-center space-y-4">
+              <div className="p-3 rounded-full bg-primary/10 text-primary">
+                <Globe2 className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold">Global Export Ready</h3>
+              <p className="text-muted-foreground">
+                Experienced in logistics and documentation for smooth export to any country.
+              </p>
+            </CardContent>
+          </Card>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      </section>
+
+      {/* Featured Products Preview */}
+      <section className="bg-muted/30 py-24">
+        <div className="container px-4 max-w-screen-xl mx-auto">
+          <SectionHeader
+            title="Our Core Products"
+            subtitle="Explore our range of high-quality coconut derivatives tailored for export."
+          />
+
+          <div className="grid gap-8 md:grid-cols-3">
+            {/* Product 1: Dehusked */}
+            <div className="group relative overflow-hidden rounded-2xl bg-background border hover:shadow-xl transition-all duration-300">
+              <div className="aspect-[4/3] w-full relative overflow-hidden">
+                <Image
+                  src="/images/kelapa kupas Bulat.png"
+                  alt="Coconut Dehusked"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Coconut Dehusked</h3>
+                <p className="text-muted-foreground mb-4 line-clamp-2">
+                  Fresh, semi-husked coconuts perfect for retail and wholesale markets.
+                </p>
+                <Link href="/products#dehusked" className="font-medium text-primary hover:underline inline-flex items-center">
+                  View Specifications <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Product 2: Copra */}
+            <div className="group relative overflow-hidden rounded-2xl bg-background border hover:shadow-xl transition-all duration-300">
+              <div className="aspect-[4/3] w-full relative overflow-hidden">
+                <Image
+                  src="/images/coprahd.png"
+                  alt="Copra Asalan"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Copra (Asalan)</h3>
+                <p className="text-muted-foreground mb-4 line-clamp-2">
+                  High oil content dried coconut suitable for oil extraction and industrial use.
+                </p>
+                <Link href="/products#copra" className="font-medium text-primary hover:underline inline-flex items-center">
+                  View Specifications <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Product 3: White Coconut */}
+            <div className="group relative overflow-hidden rounded-2xl bg-background border hover:shadow-xl transition-all duration-300">
+              <div className="aspect-[4/3] w-full relative overflow-hidden">
+                <Image
+                  src="/images/kelapa abandon.png"
+                  alt="White Coconut"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">White Coconut</h3>
+                <p className="text-muted-foreground mb-4 line-clamp-2">
+                  Premium white meat coconut (Abandon), clean and ready for specialized processing.
+                </p>
+                <Link href="/products#white-coconut" className="font-medium text-primary hover:underline inline-flex items-center">
+                  View Specifications <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/products">View All Products</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Production Snippet */}
+      <section className="container py-24 px-4 max-w-screen-xl mx-auto">
+        <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="order-2 lg:order-1 relative rounded-3xl overflow-hidden aspect-video bg-muted shadow-2xl group">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/images/Coprahd.png"
+              alt="Production Process"
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+              <div className="text-white">
+                <p className="font-bold text-lg">Hygienic Processing</p>
+                <p className="text-sm text-white/80">Ensuring highest quality standards</p>
+              </div>
+            </div>
+          </div>
+          <div className="order-1 lg:order-2 space-y-6">
+            <SectionHeader
+              title="State-of-the-Art Production"
+              align="left"
+              className="mb-6"
+            />
+            <p className="text-lg text-muted-foreground">
+              We take pride in our rigorous production standards. From the moment the coconuts arrive at our facility to the final packaging, every step is monitored for quality.
+            </p>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="h-6 w-6 text-secondary shrink-0" />
+                <span>Advanced Sorting & Grading Systems</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="h-6 w-6 text-secondary shrink-0" />
+                <span>Strict Hygiene & Humidity Control</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="h-6 w-6 text-secondary shrink-0" />
+                <span>Efficient Warehousing & Logistics</span>
+              </li>
+            </ul>
+            <Button className="mt-4" asChild>
+              <Link href="/production">Learn About Our Process</Link>
+            </Button>
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-gradient-to-r from-primary via-[#4E342E] to-primary text-primary-foreground py-24">
+        <div className="container px-4 text-center max-w-screen-lg mx-auto space-y-8">
+          <h2 className="text-3xl md:text-5xl font-bold">Ready to Partner With Us?</h2>
+          <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">
+            Get in touch for quotations, samples, or to discuss your specific requirements. We are ready to supply your business.
+          </p>
+          <Button size="lg" className="h-14 px-8 text-lg bg-accent text-accent-foreground hover:bg-accent/90 border-none" asChild>
+            <Link href="/contact">Get a Quote Today</Link>
+          </Button>
+        </div>
+      </section>
     </div>
   );
 }
