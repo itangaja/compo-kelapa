@@ -25,7 +25,6 @@ export default function ProductsPage() {
                         <div className="space-y-6">
                             <div className="flex items-center gap-3">
                                 <h2 className="text-3xl font-bold text-foreground">Coconut Dehusked</h2>
-                                <Badge variant="secondary">Best Seller</Badge>
                             </div>
                             <h3 className="text-xl text-primary font-medium">(Kelapa Kupas Bulat)</h3>
                             <p className="text-muted-foreground text-lg leading-relaxed">
@@ -96,7 +95,6 @@ export default function ProductsPage() {
                         <div className="order-1 lg:order-2 space-y-6">
                             <div className="flex items-center gap-3">
                                 <h2 className="text-3xl font-bold text-foreground">Copra</h2>
-                                <Badge variant="outline">Industrial Grade</Badge>
                             </div>
                             <h3 className="text-xl text-primary font-medium">(Kopra Asalan)</h3>
                             <p className="text-muted-foreground text-lg leading-relaxed">
@@ -149,7 +147,6 @@ export default function ProductsPage() {
                         <div className="space-y-6">
                             <div className="flex items-center gap-3">
                                 <h2 className="text-3xl font-bold text-foreground">White Coconut</h2>
-                                <Badge variant="secondary">Premium</Badge>
                             </div>
                             <h3 className="text-xl text-primary font-medium">(Kelapa Putih Abandon)</h3>
                             <p className="text-muted-foreground text-lg leading-relaxed">
