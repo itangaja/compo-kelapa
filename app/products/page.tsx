@@ -70,7 +70,7 @@ export default function ProductsPage() {
 
                         <div className="relative aspect-square md:aspect-[4/3] rounded-2xl bg-muted overflow-hidden shadow-xl">
                             <Image
-                                src="/images/Kelapa Kupas Bulat.png"
+                                src="/images/kelapa-kupas-bulat.png"
                                 alt="Coconut Dehusked"
                                 fill
                                 className="object-cover"
@@ -86,7 +86,7 @@ export default function ProductsPage() {
                     <div className="grid gap-8 lg:grid-cols-2">
                         <div className="order-2 lg:order-1 relative aspect-square md:aspect-[4/3] rounded-2xl bg-muted overflow-hidden shadow-xl">
                             <Image
-                                src="/images/Coprahd.png"
+                                src="/images/coprahd.png"
                                 alt="Copra Asalan"
                                 fill
                                 className="object-cover"
@@ -194,7 +194,7 @@ export default function ProductsPage() {
 
                         <div className="relative aspect-square md:aspect-[4/3] rounded-2xl bg-muted overflow-hidden shadow-xl">
                             <Image
-                                src="/images/kelapa abandon.png"
+                                src="/images/kelapa-abandon.png"
                                 alt="White Coconut"
                                 fill
                                 className="object-cover"

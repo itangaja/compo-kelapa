@@ -31,6 +31,20 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Steps to Deploy:
+
+1.  Push your code to GitHub (already done).
+2.  Go to [Vercel Dashboard](https://vercel.com/dashboard).
+3.  Click **"Add New..."** -> **"Project"**.
+4.  Select **"Import"** next to the `compo-kelapa` repository.
+5.  In the configuration screen:
+    -   **Framework Preset**: Next.js (should be auto-detected).
+    -   **Root Directory**: `./` (default).
+    -   **Build Command**: `npm run build` (default).
+    -   **Output Directory**: `.next` (default).
+    -   **Install Command**: `npm install` (default).
+6.  Click **"Deploy"**.
+
+Vercel will build the project and provide you with a live URL (e.g., `compo-kelapa.vercel.app`).

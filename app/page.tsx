@@ -66,7 +66,7 @@ export default function Home() {
             <div className="group relative overflow-hidden rounded-2xl bg-background border hover:shadow-xl transition-all duration-300">
               <div className="aspect-[4/3] w-full relative overflow-hidden">
                 <Image
-                  src="/images/kelapa kupas Bulat.png"
+                  src="/images/kelapa-kupas-bulat.png"
                   alt="Coconut Dehusked"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -108,7 +108,7 @@ export default function Home() {
             <div className="group relative overflow-hidden rounded-2xl bg-background border hover:shadow-xl transition-all duration-300">
               <div className="aspect-[4/3] w-full relative overflow-hidden">
                 <Image
-                  src="/images/kelapa abandon.png"
+                  src="/images/kelapa-abandon.png"
                   alt="White Coconut"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -139,7 +139,7 @@ export default function Home() {
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           <div className="order-2 lg:order-1 relative rounded-3xl overflow-hidden aspect-video bg-muted shadow-2xl group">
             <Image
-              src="/images/Coprahd.png"
+              src="/images/coprahd.png"
               alt="Production Process"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
