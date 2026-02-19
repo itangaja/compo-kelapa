@@ -42,7 +42,7 @@ export function HeroSection() {
             <div className="relative z-10 max-w-5xl space-y-8 px-4 animate-in fade-in zoom-in duration-1000 slide-in-from-bottom-10">
 
                 <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl text-white drop-shadow-lg">
-                    Bringing Nature&apos;s Best <br />
+                    CV WANATOBE <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-secondary">
                         To The World
                     </span>

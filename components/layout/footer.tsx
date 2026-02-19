@@ -34,13 +34,13 @@ export function Footer() {
                         <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">Products</h3>
                         <ul className="space-y-3 text-sm text-muted-foreground">
                             <li>
-                                <Link href="/products#dehusked" className="hover:text-primary">Coconut Dehusked</Link>
+                                <Link href="/products/coconut-dehusked" className="hover:text-primary">Coconut Dehusked</Link>
                             </li>
                             <li>
-                                <Link href="/products#copra" className="hover:text-primary">Copra</Link>
+                                <Link href="/products/copra" className="hover:text-primary">Copra</Link>
                             </li>
                             <li>
-                                <Link href="/products#white-coconut" className="hover:text-primary">White Coconut</Link>
+                                <Link href="/products/white-copra" className="hover:text-primary">White Copra</Link>
                             </li>
                         </ul>
                     </div>

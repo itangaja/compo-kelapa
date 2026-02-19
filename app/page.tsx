@@ -77,7 +77,7 @@ export default function Home() {
                 <p className="text-muted-foreground mb-4 line-clamp-2">
                   Fresh, semi-husked coconuts perfect for retail and wholesale markets.
                 </p>
-                <Link href="/products#dehusked" className="font-medium text-primary hover:underline inline-flex items-center">
+                <Link href="/products/coconut-dehusked" className="font-medium text-primary hover:underline inline-flex items-center">
                   View Specifications <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>
@@ -98,7 +98,7 @@ export default function Home() {
                 <p className="text-muted-foreground mb-4 line-clamp-2">
                   High oil content dried coconut suitable for oil extraction and industrial use.
                 </p>
-                <Link href="/products#copra" className="font-medium text-primary hover:underline inline-flex items-center">
+                <Link href="/products/copra" className="font-medium text-primary hover:underline inline-flex items-center">
                   View Specifications <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>
@@ -115,11 +115,11 @@ export default function Home() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">White Coconut</h3>
+                <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">White Copra</h3>
                 <p className="text-muted-foreground mb-4 line-clamp-2">
-                  Premium white meat coconut (Abandon), clean and ready for specialized processing.
+                  Premium white meat coconut (Kopra Putih), clean and ready for specialized processing.
                 </p>
-                <Link href="/products#white-coconut" className="font-medium text-primary hover:underline inline-flex items-center">
+                <Link href="/products/white-copra" className="font-medium text-primary hover:underline inline-flex items-center">
                   View Specifications <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>

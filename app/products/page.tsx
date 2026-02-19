@@ -1,9 +1,9 @@
+
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { SectionHeader } from "@/components/ui/section-header";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { Package } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function ProductsPage() {
     return (
@@ -17,189 +17,71 @@ export default function ProductsPage() {
                 </div>
             </section>
 
-            <div className="container px-4 py-12 max-w-screen-xl mx-auto space-y-24">
-
-                {/* Product 1: Coconut Dehusked */}
-                <section id="dehusked" className="scroll-mt-24">
-                    <div className="grid gap-8 lg:grid-cols-2">
-                        <div className="space-y-6">
-                            <div className="flex items-center gap-3">
-                                <h2 className="text-3xl font-bold text-foreground">Coconut Dehusked</h2>
-                            </div>
-                            <h3 className="text-xl text-primary font-medium">(Kelapa Kupas Bulat)</h3>
-                            <p className="text-muted-foreground text-lg leading-relaxed">
-                                Our semi-husked coconuts are carefully selected from the best plantations. They are known for their thick meat and sweet water, making them ideal for fresh consumption or processing into coconut milk and oil.
-                            </p>
-
-                            <Card>
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-2">
-                                        <Package className="h-5 w-5 text-primary" />
-                                        Product Specifications
-                                    </CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <Table>
-                                        <TableBody>
-                                            <TableRow>
-                                                <TableCell className="font-medium">Weight</TableCell>
-                                                <TableCell>800g - 1200g per nut</TableCell>
-                                            </TableRow>
-                                            <TableRow>
-                                                <TableCell className="font-medium">Moisture</TableCell>
-                                                <TableCell>Naturally preserved</TableCell>
-                                            </TableRow>
-                                            <TableRow>
-                                                <TableCell className="font-medium">Packaging</TableCell>
-                                                <TableCell>Net bag (20-25 nuts) / Wholesale Bulk</TableCell>
-                                            </TableRow>
-                                            <TableRow>
-                                                <TableCell className="font-medium">MOQ</TableCell>
-                                                <TableCell>1 x 20ft Container (~14 MT)</TableCell>
-                                            </TableRow>
-                                            <TableRow>
-                                                <TableCell className="font-medium">HS Code</TableCell>
-                                                <TableCell>0801.19.10</TableCell>
-                                            </TableRow>
-                                        </TableBody>
-                                    </Table>
-                                </CardContent>
-                            </Card>
-                        </div>
-
-                        <div className="relative aspect-square md:aspect-[4/3] rounded-2xl bg-muted overflow-hidden shadow-xl">
+            <div className="container px-4 py-16 max-w-screen-xl mx-auto">
+                <div className="grid gap-8 md:grid-cols-3">
+                    {/* Product 1: Dehusked */}
+                    <Link href="/products/coconut-dehusked" className="group relative overflow-hidden rounded-2xl bg-background border hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+                        <div className="aspect-[4/3] w-full relative overflow-hidden">
                             <Image
                                 src="/images/kelapa-kupas-bulat.png"
                                 alt="Coconut Dehusked"
                                 fill
-                                className="object-cover"
+                                className="object-cover transition-transform duration-500 group-hover:scale-110"
                             />
                         </div>
-                    </div>
-                </section>
+                        <div className="p-6 flex flex-col flex-grow">
+                            <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Coconut Dehusked</h3>
+                            <p className="text-muted-foreground mb-6 line-clamp-3">
+                                Fresh, semi-husked coconuts perfect for retail and wholesale markets. Known for thick meat and sweet water.
+                            </p>
+                            <div className="mt-auto flex items-center text-primary font-medium group-hover:underline">
+                                View Details <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                            </div>
+                        </div>
+                    </Link>
 
-                <hr className="border-muted" />
-
-                {/* Product 2: Copra */}
-                <section id="copra" className="scroll-mt-24">
-                    <div className="grid gap-8 lg:grid-cols-2">
-                        <div className="order-2 lg:order-1 relative aspect-square md:aspect-[4/3] rounded-2xl bg-muted overflow-hidden shadow-xl">
+                    {/* Product 2: Copra */}
+                    <Link href="/products/copra" className="group relative overflow-hidden rounded-2xl bg-background border hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+                        <div className="aspect-[4/3] w-full relative overflow-hidden">
                             <Image
                                 src="/images/coprahd.png"
-                                alt="Copra Asalan"
+                                alt="Copra"
                                 fill
-                                className="object-cover"
+                                className="object-cover transition-transform duration-500 group-hover:scale-110"
                             />
                         </div>
-
-                        <div className="order-1 lg:order-2 space-y-6">
-                            <div className="flex items-center gap-3">
-                                <h2 className="text-3xl font-bold text-foreground">Copra</h2>
-                            </div>
-                            <h3 className="text-xl text-primary font-medium">(Kopra Asalan)</h3>
-                            <p className="text-muted-foreground text-lg leading-relaxed">
-                                High-quality dried coconut meat with high oil content. Our copra is sun-dried or kiln-dried to specific moisture levels, perfect for coconut oil production and animal feed.
+                        <div className="p-6 flex flex-col flex-grow">
+                            <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Copra</h3>
+                            <p className="text-muted-foreground mb-6 line-clamp-3">
+                                High-quality dried coconut meat (Asalan) with high oil content. Ideal for coconut oil production and industrial use.
                             </p>
-
-                            <Card>
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-2">
-                                        <Package className="h-5 w-5 text-primary" />
-                                        Product Specifications
-                                    </CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <Table>
-                                        <TableBody>
-                                            <TableRow>
-                                                <TableCell className="font-medium">Moisture Content</TableCell>
-                                                <TableCell>5% - 7% (Reg), 10-15% (Asalan)</TableCell>
-                                            </TableRow>
-                                            <TableRow>
-                                                <TableCell className="font-medium">Oil Content</TableCell>
-                                                <TableCell>~60-65%</TableCell>
-                                            </TableRow>
-                                            <TableRow>
-                                                <TableCell className="font-medium">Packaging</TableCell>
-                                                <TableCell>Jute Gunny Bag / PP Bag (50kg)</TableCell>
-                                            </TableRow>
-                                            <TableRow>
-                                                <TableCell className="font-medium">MOQ</TableCell>
-                                                <TableCell>1 x 20ft Container (~12-13 MT)</TableCell>
-                                            </TableRow>
-                                            <TableRow>
-                                                <TableCell className="font-medium">HS Code</TableCell>
-                                                <TableCell>1203.00.00</TableCell>
-                                            </TableRow>
-                                        </TableBody>
-                                    </Table>
-                                </CardContent>
-                            </Card>
-                        </div>
-                    </div>
-                </section>
-
-                <hr className="border-muted" />
-
-                {/* Product 3: White Coconut */}
-                <section id="white-coconut" className="scroll-mt-24">
-                    <div className="grid gap-8 lg:grid-cols-2">
-                        <div className="space-y-6">
-                            <div className="flex items-center gap-3">
-                                <h2 className="text-3xl font-bold text-foreground">White Coconut</h2>
+                            <div className="mt-auto flex items-center text-primary font-medium group-hover:underline">
+                                View Details <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                             </div>
-                            <h3 className="text-xl text-primary font-medium">(Kelapa Putih Abandon)</h3>
-                            <p className="text-muted-foreground text-lg leading-relaxed">
-                                Selected coconuts with the shell completely removed, leaving only the white meat. Ideal for desiccated coconut production, coconut flour, or premium culinary use.
-                            </p>
-
-                            <Card>
-                                <CardHeader>
-                                    <CardTitle className="flex items-center gap-2">
-                                        <Package className="h-5 w-5 text-primary" />
-                                        Product Specifications
-                                    </CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <Table>
-                                        <TableBody>
-                                            <TableRow>
-                                                <TableCell className="font-medium">Size</TableCell>
-                                                <TableCell>Variable / Graded by diameter</TableCell>
-                                            </TableRow>
-                                            <TableRow>
-                                                <TableCell className="font-medium">Quality</TableCell>
-                                                <TableCell>White meat, no shell, no testa</TableCell>
-                                            </TableRow>
-                                            <TableRow>
-                                                <TableCell className="font-medium">Packaging</TableCell>
-                                                <TableCell>Vacuum packed / Frozen (Requires Reefer)</TableCell>
-                                            </TableRow>
-                                            <TableRow>
-                                                <TableCell className="font-medium">MOQ</TableCell>
-                                                <TableCell>1 x 20ft Reefer Container</TableCell>
-                                            </TableRow>
-                                            <TableRow>
-                                                <TableCell className="font-medium">HS Code</TableCell>
-                                                <TableCell>0801.19.90</TableCell>
-                                            </TableRow>
-                                        </TableBody>
-                                    </Table>
-                                </CardContent>
-                            </Card>
                         </div>
+                    </Link>
 
-                        <div className="relative aspect-square md:aspect-[4/3] rounded-2xl bg-muted overflow-hidden shadow-xl">
+                    {/* Product 3: White Copra */}
+                    <Link href="/products/white-copra" className="group relative overflow-hidden rounded-2xl bg-background border hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+                        <div className="aspect-[4/3] w-full relative overflow-hidden">
                             <Image
                                 src="/images/kelapa-abandon.png"
-                                alt="White Coconut"
+                                alt="White Copra"
                                 fill
-                                className="object-cover"
+                                className="object-cover transition-transform duration-500 group-hover:scale-110"
                             />
                         </div>
-                    </div>
-                </section>
-
+                        <div className="p-6 flex flex-col flex-grow">
+                            <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">White Copra</h3>
+                            <p className="text-muted-foreground mb-6 line-clamp-3">
+                                Premium white meat coconut (Kopra Putih). Clean, dried, and ready for specialized processing or culinary use.
+                            </p>
+                            <div className="mt-auto flex items-center text-primary font-medium group-hover:underline">
+                                View Details <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                            </div>
+                        </div>
+                    </Link>
+                </div>
             </div>
         </div>
     );
